@@ -1,3 +1,4 @@
+# Introduction to problem solving -DSA
 ## check if the given number is prime or not 
 import math
 
