@@ -1,5 +1,6 @@
+# Time complexity - 1
 ###################################################
-######### Reference links
+######### Reference links ######### 
 # Understanding log : https://www.mathsisfun.com/algebra/logarithms.html
 # AP: https://www.mathsisfun.com/algebra/sequences-sums-arithmetic.html
 # GP: https://www.mathsisfun.com/algebra/sequences-sums-geometric.html
@@ -17,7 +18,7 @@ def solve():
         for j in range(i // 2):
             # O(1) operation
             print(j)
-# time complexity of the above code is - O(N*N)
+## time complexity of the above code is - O(N*N)
 
 k = 0
 for i in range(n//2, n+1):
@@ -25,24 +26,24 @@ for i in range(n//2, n+1):
     while j<=n:
          k = k + n//2
          j = j * 2
-# time complexity of the above code is - O(NlogN)
+## time complexity of the above code is - O(NlogN)
 
 a = 0
 i = N
 while i > 0:
     a += i
     i //= 2
-# time complexity of the above code is  - O(logN)
+## time complexity of the above code is  - O(logN)
 
-# The complexity of Binary search algorithm is - O(logN) 
+## The complexity of Binary search algorithm is - O(logN) 
 
-# If an algorithm has a time complexity of O(1), then the complexity of it is ? - constant
+## If an algorithm has a time complexity of O(1), then the complexity of it is ? - constant
 
-# If for an algorithm time complexity is given by O(log2n) then complexity will be - logarithmic time complexity
+## If for an algorithm time complexity is given by O(log2n) then complexity will be - logarithmic time complexity
 
-# If an algorithm has a time complexity of O(n), then the complexity of it is ? - linear
+## If an algorithm has a time complexity of O(n), then the complexity of it is ? - linear
 
-# If for an algorithm time complexity is given by O((3/2)^n) then complexity will be - exponential
+## If for an algorithm time complexity is given by O((3/2)^n) then complexity will be - exponential
 
 def solve():
    i = n
@@ -52,5 +53,5 @@ def solve():
                  #O(1) operation
                  print(j)
        i = i//2
-# time complexity of the above code is - O(N*NlogN)
+## time complexity of the above code is - O(N*NlogN)
 
