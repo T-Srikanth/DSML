@@ -39,6 +39,19 @@ def maxSubArray(A):
     max_so_far = max(max_so_far, max_ending_here)
   return max_so_far
 
+def kaden_max(arr):
+  n = len(arr)
+  sum = 0
+  max_sum = -99999 #some big negative number
+  for i in range(n):
+    sum += arr[i]
+    max_sum = max(max_sum, sum)
+    if sum < 0:
+      sum = 0
+  return max_sum
+# A = [6,7,-9,8,2]
+# print(kaden_max(A))      
+
 ## Subarray with least average
 # Given an array A of size N, find the subarray of size B with the least average.
 def least_average(arr, B):  #comparing least subarray totals instead of average as average is total/fixed_value
