@@ -112,7 +112,7 @@ def sub_matrices(A,B):
 
 ## Matrix Scalar product
 # You are given a matrix A and and an integer B, you have to perform scalar multiplication of matrix A with an integer B.
-def sub_matrices(A,B):
+def prod_matrices(A,B):
   rows = len(A)
   columns = len(A[0])
   for i in range(rows):
