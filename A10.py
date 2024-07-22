@@ -66,7 +66,7 @@ def ones_count(A):
 def numSetBits(self, A):
   ret = 0
   while A != 0:
-    # rightmost set bit becomes unset
+    # rightmost set bit of A becomes unset by performing 'A & (A-1)' operation each time the loop runs until all the set bit are unset making A == 0
     A = A & (A - 1)
     ret += 1
   return ret
