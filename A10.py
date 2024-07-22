@@ -95,8 +95,8 @@ def reverse(A):
   i = 31
   ret = 0
   while i >= 0:
-    temp = ((A & 1<<i) >> i)&1
-    ret = ret | temp << (31-i)
+    temp = ((A & 1<<i) >> i)&1   ## (binary '>>' i) operation moves the binary value on the left side of it i places to the right and '<<' moves it left side.
+    ret = ret | temp << (31-i)  ## The function iterates through each bit of the 32-bit integer A. It extracts each bit and places it in its mirrored position in the result ret.
     i -= 1
   return ret
 # print(reverse(3))
