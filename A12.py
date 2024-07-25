@@ -5,7 +5,7 @@
 
 ## Excel Column Number
 # Given a column title as appears in an Excel sheet, return its corresponding column number.
-# AB should output 28; ord('A')=64; A should output 1, B should output 2 ... Z should output 26 then AA should output 27
+# AB should output 28; ord('A')=65; A should output 1, B should output 2 ... Z should output 26 then AA should output 27
 def col_number(string):
   ans = 0
   n = len(string)
