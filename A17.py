@@ -13,7 +13,6 @@
 # First sub-array means the sub-array for which starting index in minimum.
 def subarray_sum(A,B):
   n=len(A)
-  ans = []
   for i in range(n):
     sum=0
     for j in range(i,n):
@@ -77,7 +76,6 @@ def diff(A,B):
 ## Longest consecutive sequence
 # Given an unsorted integer array A of size N. Find the length of the longest set of consecutive elements from array A.
 def long_consec(A):
-  n=len(A)
   ans=0
   for val in A:
     if val-1 in A:
@@ -121,7 +119,7 @@ def distinct_num(A,B):
 # B = 1
 # print(distinct_num(A,B))
 #OR
-def dNums(self, A, B):
+def dNums(A, B):
   n = len(A)
   ret = []
   m = {}
@@ -179,11 +177,11 @@ def pair_xor(A,B):
       count += 1
     a_dict[val] = 1
   return count
-A = [3, 6, 8, 10, 15, 50]
-B = 5
-print(pair_xor(A,B))
+# A = [3, 6, 8, 10, 15, 50]
+# B = 5
+# print(pair_xor(A,B))
 #OR
-def xorPairCount(arr, x): 
+def xorPairCount(A, x): 
   result = 0 # Initialize result 
   n=len(A)  
   # create empty set that stores the  
@@ -195,30 +193,38 @@ def xorPairCount(arr, x):
     # means there exist an element such  
     # that the XOR of element with arr[i]   
     # is equal to x, then increment count. 
-    if(x ^ arr[i] in s): 
+    if(x ^ A[i] in s): 
       result = result + 1          
     # Make element visited 
-    s.add(arr[i]) 
+    s.add(A[i]) 
     print(s)
   return result
 # A = [3, 6, 8, 10, 15, 50]
 # B = 5
-# print(xorPairCount(arr=A,x=B))
+# print(xorPairCount(A,x=B))
 
 ## Valid Sudoku
 # Determine if a Sudoku is valid, according to
 def isValidSudoku(A):
-  rows = [[False for i in xrange(9)] for j in xrange(9)]
-  cols = [[False for i in xrange(9)] for j in xrange(9)]
-  grids = [[False for i in xrange(9)] for j in xrange(9)]  
-  for i in xrange(9):
-    for j in xrange(9):
+  # Create 2D arrays for rows, cols, and grids to keep track of seen numbers
+  rows = [[False for _ in range(9)] for _ in range(9)]
+  cols = [[False for _ in range(9)] for _ in range(9)]
+  grids = [[False for _ in range(9)] for _ in range(9)]   
+  # Iterate through each cell in the Sudoku board
+  for i in range(9):
+    for j in range(9):
+      # If the cell is empty, continue to the next cell
       if A[i][j] == '.':
-        continue
-      num = int(A[i][j])-1
-      grid = (i/3)*3 + (j/3)
+        continue   
+      # Convert the character number to an integer (0-indexed)
+      num = int(A[i][j]) - 1   
+      # Determine which 3x3 grid the current cell belongs to
+      grid = (i // 3) * 3 + (j // 3)      
+      # Check if the number has already been seen in the current row, column, or grid
       if rows[i][num] or cols[j][num] or grids[grid][num]:
         return 0
       else:
+        # Mark the number as seen in the current row, column, and grid
         rows[i][num], cols[j][num], grids[grid][num] = True, True, True             
+  # If no conflicts were found, return 1 indicating the Sudoku board is valid
   return 1
