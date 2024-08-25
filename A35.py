@@ -1,4 +1,4 @@
-# DSML Advanced: Python Regular Expressions
+# DSML Advanced: Probability and Statistics - 1
 ###################################################
 ######### Reference links #########
 # https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/video_galleries/video-lectures/
